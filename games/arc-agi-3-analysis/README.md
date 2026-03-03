@@ -49,8 +49,16 @@ The only rule: same prompt every time. Any model, any platform, as many runs as 
 
 ---
 
+## Review Process
+
+1. A bot checks your PR automatically — wrong paths get closed, missing fields get flagged with a comment explaining what to fix
+2. Once the check passes, a maintainer reviews and merges
+3. On merge, your submission is automatically appended to the registry
+
+Typical turnaround: within a day or two. Fix any bot feedback and push to the same branch — no need to open a new PR.
+
+---
+
 ## Submissions
 
-| Handle | Model | Method | Link |
-|--------|-------|--------|------|
-| *(be first)* | | | |
+See [SUBMISSIONS.md](SUBMISSIONS.md) for the full registry.
