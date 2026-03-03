@@ -1,0 +1,28 @@
+name: Validate Submission
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+
+# pull_request_target runs in the base branch context, giving us write
+# permissions even for fork PRs. We check out the base branch to get our
+# validation script, then read PR file content via the GitHub API only —
+# no PR code is ever executed.
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        # Checks out base branch (not the PR) — this is intentional and secure
+
+      - name: Validate PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_SHA: ${{ github.event.pull_request.head.sha }}
+          REPO: ${{ github.repository }}
+        run: python3 .github/scripts/validate_submission.py
