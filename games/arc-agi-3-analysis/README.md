@@ -2,7 +2,7 @@
 
 **Status:** Open for submissions
 
-Run the prompt below. Post your output as an X Article or GitHub URL. Submit here via PR.
+Analyze a GitHub repo with the AI of your choice. Post your output, track your usage, submit here.
 
 ---
 
@@ -15,16 +15,14 @@ Run the prompt below. Post your output as an X Article or GitHub URL. Submit her
 
 ---
 
-## The Prompt
+## How to Play
 
-> Lets play a game. Run this prompt. Post the result as a link to an X Article or github url and reply back here.
-> In your reply: Model and method used, link to output, estimated usage
-> Take note of your usage, using inference/LLM platform of your choice, screenshot usage before and after running the prompt. Run the prompt however your environment is configured but dont add instruction or change the prompt. Submit as many times as you want. Im fine with qwen or homebrewed submissions also, the only rule is use the same prompt.
-> I will post my own as replies to this article. Example:
-> Opus 4.6 with sub agents and custom tools using Claude Code, \<url\>, \<usage%\>
-> Opus 4.6 standard Claude Code, \<url\>, \<usage%\>
+1. Copy the prompt from [PROMPT.md](PROMPT.md) — run it verbatim, no modifications
+2. Post your output as an X Article or GitHub URL
+3. Note your usage (screenshot before/after, or token/cost estimate)
+4. Submit here via PR with your model, method, link, and usage
 
-See [PROMPT.md](PROMPT.md) for the full prompt to run.
+The only rule: same prompt every time. Any model, any platform, as many runs as you want.
 
 ---
 
@@ -51,8 +49,16 @@ See [PROMPT.md](PROMPT.md) for the full prompt to run.
 
 ---
 
+## Review Process
+
+1. A bot checks your PR automatically — wrong paths get closed, missing fields get flagged with a comment explaining what to fix
+2. Once the check passes, a maintainer reviews and merges
+3. On merge, your submission is automatically appended to the registry
+
+Typical turnaround: within a day or two. Fix any bot feedback and push to the same branch — no need to open a new PR.
+
+---
+
 ## Submissions
 
-| Handle | Model | Method | Link |
-|--------|-------|--------|------|
-| *(be first)* | | | |
+See [SUBMISSIONS.md](SUBMISSIONS.md) for the full registry.
